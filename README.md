@@ -38,8 +38,8 @@ npm test
 
 [nix-build-image]: https://semaphoreci.com/api/v1/medikoo-org/cli-sprintf-format/branches/master/shields_badge.svg
 [nix-build-url]: https://semaphoreci.com/medikoo-org/cli-sprintf-format
-[win-build-image]: https://ci.appveyor.com/api/projects/status/o3dnowm0ftn21u61?svg=true
-[win-build-url]: https://ci.appveyor.com/api/projects/status/o3dnowm0ftn21u61
+[win-build-image]: https://ci.appveyor.com/api/projects/status/yayquk1ju3m9lgbn?svg=true
+[win-build-url]: https://ci.appveyor.com/api/projects/status/yayquk1ju3m9lgbn
 [cov-image]: https://img.shields.io/codecov/c/github/medikoo/cli-sprintf-format.svg
 [cov-url]: https://codecov.io/gh/medikoo/cli-sprintf-format
 [transpilation-image]: https://img.shields.io/badge/transpilation-free-brightgreen.svg
