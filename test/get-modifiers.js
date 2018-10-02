@@ -45,10 +45,17 @@ test("getModifiers", t => {
 			"{ foo: 'bar' }",
 			"O modifier should expose only enumerable object properties"
 		);
-		t.equal(modifiers.s("maro"), "maro", "s modifier should expose string");
-		t.equal(modifiers.s(undefined), "undefined", "s modifier exposes no value");
 		t.equal(
-			modifiers.s(Object.create(null)), "<invalid>",
+			modifiers.s("maro\nmar", {}), "maro\\nmar",
+			"s modifier should put inline multiline string"
+		);
+		t.equal(modifiers.s(undefined, {}), "undefined", "s modifier exposes no value");
+		t.equal(
+			modifiers.s("maro\nmar", { flags: "#" }), "maro\nmar",
+			"s modifier with '#' should put inline multiline string"
+		);
+		t.equal(
+			modifiers.s(Object.create(null), {}), "<invalid>",
 			"s modifier handles not stringifiable value"
 		);
 		t.equal(

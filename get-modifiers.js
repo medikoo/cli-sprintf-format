@@ -48,6 +48,7 @@ const resolveInspectOptionsVariants = (inspectDepth, colorsSupportLevel) => {
 	return optionsVariants;
 };
 
+// eslint-disable-next-line max-lines-per-function
 module.exports = (options = {}) => {
 	if (!isObject(options)) options = {};
 
@@ -83,13 +84,14 @@ module.exports = (options = {}) => {
 		),
 		o: value => inspect(value, inspectOptionsVariants.all),
 		O: value => inspect(value, inspectOptionsVariants.visible),
-		s: value => {
+		s: (value, placeholder) => {
 			try {
 				if (value && isCallable(value.toString)) value = value.toString();
 				else value = String(value);
 			} catch (e) {
 				return decorateInvalidValue("<invalid>");
 			}
+			if (placeholder.flags && placeholder.flags.includes("#")) return value;
 			return decorateStringValue(inspect(value, inspectOptionsVariants.string).slice(1, -1));
 		},
 		rest: (args, formatStringData) =>

@@ -8,13 +8,14 @@
 
 ## CLI dedicated sprintf formatter
 
-A better version of [util.formatWithOptions](https://nodejs.org/dist/latest-v10.x/docs/api/util.html#util_util_formatwithoptions_inspectoptions_format_args)
+An improved version of [util.formatWithOptions](https://nodejs.org/api/util.html#util_util_formatwithoptions_inspectoptions_format_args)
 
 - Provides more reliable type resolution and error handling
 - Detects color support (via [supports-color](https://github.com/chalk/supports-color#readme))
 - Ensures colored (if supported) output not only for the inspected objects but also for primitive vaulues
 - Colored JSON (`%j`) formatting
 - Object inspection depth defaults to `4`, but can be overriden via `FORMAT_INSPECT_DEPTH` environment variable
+- For `%s` strings are passed through [`inspect`](https://nodejs.org/api/util.html#util_util_inspect_object_options) formatter therefore appear colored (if supported) and eventual multiline content appears inline. To escape that behavior `%#s` should be used instead
 
 ### Installation
 
