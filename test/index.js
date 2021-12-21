@@ -1,4 +1,8 @@
+#!/usr/bin/env node
+
 "use strict";
+
+require("essentials");
 
 const d               = require("d")
     , test            = require("tape")
@@ -39,3 +43,5 @@ test("(main)", t => {
 	);
 	t.end();
 });
+
+require("./get-modifiers.js");
