@@ -12,10 +12,7 @@
 		"cli",
 		"ansi"
 	],
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/medikoo/cli-sprintf-format.git"
-	},
+	"repository": "medikoo/cli-sprintf-format",
 	"dependencies": {
 		"cli-color": "^1.3",
 		"es5-ext": "^0.10.46",
