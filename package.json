@@ -17,7 +17,7 @@
 		"cli-color": "^2.0.1",
 		"es5-ext": "^0.10.46",
 		"sprintf-kit": "2",
-		"supports-color": "^5.5"
+		"supports-color": "^6.1.0"
 	},
 	"devDependencies": {
 		"cjs-module": "^1.4",
