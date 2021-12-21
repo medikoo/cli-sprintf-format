@@ -50,5 +50,8 @@
 		"lint": "eslint --ignore-path=.gitignore .",
 		"test": "tape-index && node test.index.js"
 	},
+	"engines": {
+		"node": ">=6.0"
+	},
 	"license": "ISC"
 }
