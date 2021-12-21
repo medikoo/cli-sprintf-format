@@ -24,7 +24,12 @@ const resolveInspectDepth = userValue => {
 const resolveInspectOptionsVariants = (inspectDepth, colorsSupportLevel) => {
 	// Preconfigure inspect options for each case
 	const optionsVariants = {};
-	optionsVariants.visible = { breakLength: 120, depth: inspectDepth, colors: colorsSupportLevel };
+	optionsVariants.visible = {
+		compact: true,
+		breakLength: 120,
+		depth: inspectDepth,
+		colors: colorsSupportLevel
+	};
 	optionsVariants.all = Object.assign(
 		{ showHidden: true, showProxy: true }, optionsVariants.visible
 	);
